@@ -28,36 +28,97 @@
 6.0 - Responsive
 --------------------------------------------------------------*/
 
-
-*,*:after, *:before {
-	-webkit-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+/*----- 1.0 - Typography -----*/
+body {
+	font-family: 'Kanit', sans-serif;
+	letter-spacing: .06rem;
 }
 
-/*----- 3.1 Site Structure -----*/
-.wrapper {
-	width: 60%;
-	margin: 0 auto;
+ul li a, h2, header div:last-child p:first-child {
+	text-transform: uppercase;
 }
 
-.row:after {
-	content: "";
-	display: table;
-	clear: both;
+/*----- 1.5 - Lists -----*/
+ul {
+	padding-left: 0;
+}
+
+
+ul li {
+	list-style: none;
+	display: inline-block;
+}
+
+ul li a {
+	text-decoration: none;
+}
+
+header div:last-of-type div ul li a {
+	background-color: #333333;
+	color: #fff;
+	border-radius: 5px;
+    padding: 1rem 2rem; 
+
+}
+
+
+/*----- 5.0 - Utility -----*/
+.float-right {
+	float: right;
 }
 
 .circle {
-  height: 12rem;
-  width: 12rem;
+  height: 15rem;
+  width: 15rem;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
 }
 
+/*----- 5.1 - Background Colors -----*/
+.bg-grey {
+	background-color: #f2f2f2;
+}
 
+header div:last-of-type div ul li a:hover {
+	background-color: #DBD7D7;
+}
+
+/*----- 5.2 - Text Colors -----*/
+ul li a, p, h2, header div:last-of-type div ul li a:hover  {
+	color: #333333;
+}
+
+ul li a:hover, span {
+	color: #d93d33;
+}
+
+/*----- 5.3 - Text Sizes -----*/
+ul li {
+	font-weight: 700;
+}
+
+/*----- 5.4 - Alignments -----*/
+.wrapper {
+	width: 65%
+}
+
+header:first-child .col-1-2 {
+	text-align: center;
+	display: block;
+}
+
+header:first-child div:last-child {
+	display: block;
+}
+
+header header h1 {
+	margin-bottom: 0;
+}
+
+header header {
+	margin-left: 9rem;
+}
 
 
 /* 6.0 responsive/ media queries */
@@ -70,7 +131,56 @@
 
 @media screen and (max-width:480px) {
 	
-	.wrapper {
-		width: 90%;
+	/*----- 1.0 - Typography -----*/
+	header div:last-child p:first-child {
+		font-size: 2.5rem;
 	}
+	
+	h2, p {
+	text-align: center;
 }
+
+	header:first-child div:last-of-type p:nth-child(2), p {
+		font-size: 1.05rem;
+		line-height: 2rem;
+	}
+	
+
+	
+	/*----- 5.2 - Text Colors -----*/
+	
+	
+	
+	/*----- 5.4 - Alignments -----*/
+		.wrapper {
+		width: 95%;
+	}
+	
+	.col-1-2, .col-1-4, footer .col-1-3:first-child {
+		width: 100%
+	}
+	
+	header .col-1-3 {
+		width: 60%;
+	}
+	
+	footer .col-1-3:last-child {
+		width: 50%;
+	}
+	
+	header .col-1-13 {
+		width: 33.3%;
+	}
+	
+	.col-1-4:nth-child(odd) {
+		padding-right: 0;
+	}
+	
+	header header {
+		margin: 0;
+	}
+	
+}
+
+
+
