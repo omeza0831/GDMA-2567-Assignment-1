@@ -37,60 +37,68 @@
 		</nav>
 	</div>
 	<div class="wrapper">
-		<img src="img/bg-header.jpg" alt=""> <!-- i cant get this sized properly -->
+		<img src="img/bg-header.jpg" alt="">
 	
-			<div class="col-1-2"> <!-- remove float, use margin: 0 auto;--> <!-- this div isnt displaying as block -->
+			<div class="col-1-2 center-block flex">
 				<p>we <span>design</span> things</p>
 				<p>Lorem ipsum dolor sit amet, indoctum dissentiet eam ne. Eum omnium docendi cu. Aliquid delenit an pri, ad mea nostrud nominavi menandri.</p>
-				<ul>
-					<li><a href="">view work</a></li>
-					<li><a href="">hire us</a></li>
+				<ul class="header">
+					<li class="float-left header-btn"><a href="">view work</a></li>
+					<li class="float-right header-btn"><a href="">hire us</a></li>
 				</ul>
 			</div>
 		
 	</div>
 </header>
 	
-<div class="wrapper">
+<div class="wrapper" id="work">
 	<div class="row">
-		<div class="col-1-2">
-			<header>
-				<h2>print design</h2>
+		<div class="bg-full-width">
+			<div class="col-1-2 full-width-section"><a href="#">
+				<header>
+					<h2>print design</h2>
+				</header>
 				<p>Nam purto solet eu, vero mediocrem hendrerit ad ius.</p>
-			</header>
+			</a></div>
 		</div>
-		<div class="col-1-2">
-			<header>
-				<h2>interactive</h2>
+		<div class="bg-full-width">
+			<div class="col-1-2 full-width-section"><a href="#">
+				<header>
+					<h2>interactive</h2>
+				</header>
 				<p>Vix ad posse impetus, vis id quem nobis sus- cipiantur. His an assum omnium periculis.</p>
-			</header>
+			</a></div>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-1-2">
-			<header>
-				<h2>app design</h2>
+		<div class="bg-full-width">
+			<div class="col-1-2 full-width-section"><a href="#">
+				<header>
+					<h2>app design</h2>
+				</header>
 				<p>Exerci antiopam constituam per ex, pro odio enim te, ut eam quidam docendi ancillae. Id nisl appareat mel.</p>
-			</header>
+			</a></div>
 		</div>
-		<div class="col-1-2">
-			<header>
-				<h2>branding</h2>
+		<div class="bg-full-width">
+			<div class="col-1-2 full-width-section"><a href="#">
+				<header>
+					<h2>branding</h2>
+				</header>
 				<p>Lorem ipsum dolor sit amet, indoctum dissen- tiet eam ne. Eum omnium docendi cu.</p>
-			</header>
+			</a></div>
 		</div>
 	</div>
 </div>
 	
 
-<section class="wrapper">
+<section class="wrapper" id="about">
 	<header>
 		<h2>our team</h2>
 	</header>
-	<p>Ea expetenda prodesset cum, tibique principes laboramus id pro. Ei dolorem facilis volutpat sed, eu pro dicta iracundia scripserit. Vel singulis po- sidonium ea, primis possim voluptatum ei has. Ut usu sale modus liberavisse. Eos reque mnesarchum ea, ea tamquam disputando has.</p>
+	<p class="col-3-7">Ea expetenda prodesset cum, tibique principes laboramus id pro. Ei dolorem facilis volutpat sed, eu pro dicta iracundia scripserit. Vel singulis po- sidonium ea, primis possim voluptatum ei has. Ut usu sale modus liberavisse. Eos reque mnesarchum ea, ea tamquam disputando has.</p>
 	<div class="row">
 		<section class="col-1-4">
-			<div class="circle"></div> <!-- these circles are smashed -->
+			<div class="circle"></div>
 			<ul>
 				<li></li>
 				<li></li>
@@ -141,12 +149,12 @@
 </section>
 	
 <footer class="bg-grey">
-	<div class="row wrapper">
-		<div class="col-1-3"> <!-- needs to go to 100% --> 
+	<div class="flex wrapper">
+		<div class="col-1-3">
 			<p>6041 Old York Road <br> Dekalb, IL 60115</p>
 		</div>
 		
-		<div class="col-1-13"> <!-- 50% --> 
+		<div class="col-1-13"> 
 			<a href="#"><img src="img/we-design-logo.svg" alt="wd"></a>
 		</div>
 		

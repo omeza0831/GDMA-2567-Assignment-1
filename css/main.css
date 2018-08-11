@@ -38,6 +38,33 @@ ul li a, h2, header div:last-child p:first-child {
 	text-transform: uppercase;
 }
 
+p, h2 {
+	text-align: center;
+}
+
+#work a, ul li a {
+	text-decoration: none;
+}
+
+/*----- 1.3 - Buttons -----*/
+
+header div:last-of-type div ul li a {
+	background-color: #333333;
+	color: #fff;
+	border-radius: 5px;
+}
+
+header div:last-of-type div ul li:first-child a {
+	padding: .75rem 2rem;
+}
+
+header div:last-of-type div ul li:last-child a {
+	padding: .75rem 3rem;
+}
+
+
+
+
 /*----- 1.5 - Lists -----*/
 ul {
 	padding-left: 0;
@@ -49,35 +76,89 @@ ul li {
 	display: inline-block;
 }
 
-ul li a {
-	text-decoration: none;
-}
 
-header div:last-of-type div ul li a {
-	background-color: #333333;
-	color: #fff;
-	border-radius: 5px;
-    padding: 1rem 2rem; 
+/*----- 4.0 - Media -----*/
 
-}
 
 
 /*----- 5.0 - Utility -----*/
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 .float-right {
 	float: right;
+}
+
+.float-left {
+	float: left;
 }
 
 .circle {
   height: 15rem;
   width: 15rem;
-  background-color: #bbb;
   border-radius: 50%;
-  display: inline-block;
 }
 
 /*----- 5.1 - Background Colors -----*/
 .bg-grey {
 	background-color: #f2f2f2;
+}
+
+#about section .row div {
+	float: left;
+	display: inline-block;
+}
+
+#about section:first-child .circle {
+	background-image: url("../img/about-img.1.png");
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+}
+
+#about section:nth-child(2) .circle {
+	background-image: url("../img/about-img.2.png");
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+}
+
+#about section:nth-child(3) .circle {
+	background-image: url("../img/about-img.3.png");
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+}
+
+#about section:last-child .circle {
+	background-image: url("../img/about-img.4.png");
+    background-repeat: no-repeat;
+    background-position: 25% 25%;
+}
+
+#work .row .col-1-2 {
+	margin: 0;
+	display: inline-block;
+	float: left
+}
+
+#work .row:first-child .col-1-2:first-child {
+	background-color: #fda505;
+	padding-bottom: 2rem;
+}
+
+#work .row:first-child .col-1-2:last-child {
+	background-color: #fdb738;
+}
+
+#work .row:last-child .col-1-2:first-child {
+	background-color: #fdc96a;
+}
+
+#work .row:last-child .col-1-2:last-child {
+	background-color: #fddb9d;
 }
 
 header div:last-of-type div ul li a:hover {
@@ -89,13 +170,55 @@ ul li a, p, h2, header div:last-of-type div ul li a:hover  {
 	color: #333333;
 }
 
-ul li a:hover, span {
+ul li a:hover, span, #about > header:first-of-type h2 {
 	color: #d93d33;
 }
+
+.bg-full-width:first-child { 
+   margin-left: -275px;
+   margin-right: -275px;
+ }
+
+.bg-full-width:last-child {
+
+	margin-right: -504px;
+}
+ 
+ .full-width-section:first-child {  
+	 margin-left: 225px; 
+}
+
+ .full-width-section:last-child {  
+	 margin-left: 225px; 
+	 padding-bottom: 0;
+}
+
+ #page-body-wrapper {
+   overflow-x: hidden;
+   overflow-y: hidden;
+ }
+
+#page-body { 
+	max-width: 1200px; 
+	padding: 0px 50px 0px 50px; 
+} 
 
 /*----- 5.3 - Text Sizes -----*/
 ul li {
 	font-weight: 700;
+}
+
+header div:last-child p:first-child {
+	font-size: 2.5rem;
+	font-weight: 300;
+	margin: 8rem 0 0 0;
+	text-align: center;
+}
+
+p {
+	font-size: 1.3rem;
+	font-weight: 300;
+	line-height: 2rem;
 }
 
 /*----- 5.4 - Alignments -----*/
@@ -103,17 +226,64 @@ ul li {
 	width: 65%
 }
 
+.circle {
+	margin: 5rem auto 0 auto;
+}
+
+#about p.col-3-7 {
+	display: block;
+}
+
+header .col-1-13 {
+	margin: 0;
+	padding: 0;
+}
+
+#work {
+	padding: 10rem 0;
+}
+
+header header h1 {
+	padding-top: 1rem;
+}
+
+header div:first-child ul li {
+	padding-top: 1.25rem;
+}
+
+header div:first-child ul li:nth-child(2), header div:first-child ul li:nth-child(3) {
+	margin-left: 1.5rem;
+}
+
+header div div:last-child ul {
+	margin-bottom: 0;
+}
+
+header div:first-child img, footer img {
+	width: 30px;
+}
+
 header:first-child .col-1-2 {
 	text-align: center;
 	display: block;
 }
 
-header:first-child div:last-child {
+header div:last-child p:last-of-type  {
+	margin: .75rem 0 4rem 0;
+}
+
+.center-block {
 	display: block;
+	float: none;
+	margin: 0 auto;
 }
 
 header header h1 {
-	margin-bottom: 0;
+	margin: 0;
+}
+
+header ul {
+	margin-top: 0;
 }
 
 header header {
@@ -156,7 +326,7 @@ header header {
 		width: 95%;
 	}
 	
-	.col-1-2, .col-1-4, footer .col-1-3:first-child {
+	.col-1-2, .col-1-4, footer .col-1-3:first-child, #about p.col-3-7 {
 		width: 100%
 	}
 	
@@ -184,3 +354,117 @@ header header {
 
 
 
+
+
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+/* ==== FLEX CODE 
+
+Need to include all content between Flex Code / Flex End 
+
+===*/ 
+
+.flex {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	align-items: flex-start;   /* removes the stretch property so the elements are only as tall as their content */ 
+}
+
+header-btn  { /*buttons in header */
+	flex-basis: 100%;
+}
+
+
+footer div .col-1-3:first-child {
+        order: 1;  /* This is reordering the divs from lowes to highest. By default, the divs all have an order of zero and are listed in their static position. Now they go in order of 0, 1, 2, etc */ 
+ }
+
+footer div .col-1-3:last-child {
+        order: 2; /* This is reordering the divs from lowes to highest. By default, the divs all have an order of zero and are listed in their static position. Now they go in order of 0, 1, 2, etc */ 
+ }
+
+/* END FLEX CODE */
+
+
+
+.wrapper {
+	width:70%;
+	margin:0 auto;	
+}
+
+footer, .col-1-2 {
+	text-align: center;
+}
+
+[class*='col-']:last-of-type {
+	padding-right: 0;
+}
+
+.col-1-3 {
+	width: 33.33%;
+}
+
+.col-1-2  {
+	width: 50%;
+	float: none;
+	margin: 0 auto;
+}
+
+li {
+	display: inline-block;
+}
+
+
+
+
+@media screen and (max-width:1000px) {
+	.wrapper {
+		width:95%;
+	}
+	
+	
+
+	/* === FLEX CODE 
+	The necessary code for small display 
+	==== */
+	
+	.flex  {
+		flex-wrap:  wrap; /* This tells col-1-3 to wrap onto two lines */ 
+	}
+	
+	header .flex p {
+		order: 1; /* This is reordering the text elements from lowes to highest. By default, the text all has an order of zero and are listed in their static position. Now they go in order of 0, 1, 2, etc */ 
+	}
+	
+	footer .col-1-3 {
+		flex-basis: 50%; /* This tells the width of an item to be 50% */ 
+	}
+	
+	footer .col-1-3:first-child {
+        order: 0;  /* This is reordering the divs from lowes to highest. By default, the divs all have an order of zero and are listed in their static position. Now they go in order of 0, 1, 2, etc */ 
+		flex-basis: 100%; /* This tells the width of an item to be 100% */ 
+	}
+	
+	/* END Flex code */ 
+	
+
+	
+	
+}
