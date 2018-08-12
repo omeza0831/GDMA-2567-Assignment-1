@@ -62,9 +62,6 @@ header div:last-of-type div ul li:last-child a {
 	padding: .75rem 3rem;
 }
 
-
-
-
 /*----- 1.5 - Lists -----*/
 ul {
 	padding-left: 0;
@@ -75,7 +72,6 @@ ul li {
 	list-style: none;
 	display: inline-block;
 }
-
 
 /*----- 4.0 - Media -----*/
 
@@ -94,7 +90,7 @@ ul li {
 	float: right;
 }
 
-.float-left {
+.float-left, #about section .row div, #work .row .col-1-2 {
 	float: left;
 }
 
@@ -107,11 +103,6 @@ ul li {
 /*----- 5.1 - Background Colors -----*/
 .bg-grey {
 	background-color: #f2f2f2;
-}
-
-#about section .row div {
-	float: left;
-	display: inline-block;
 }
 
 #about section:first-child .circle {
@@ -136,12 +127,6 @@ ul li {
 	background-image: url("../img/about-img.4.png");
     background-repeat: no-repeat;
     background-position: 25% 25%;
-}
-
-#work .row .col-1-2 {
-	margin: 0;
-	display: inline-block;
-	float: left
 }
 
 #work .row:first-child .col-1-2:first-child {
@@ -215,6 +200,11 @@ header div:last-child p:first-child {
 	text-align: center;
 }
 
+footer .col-1-3:first-child p {
+	font-weight: 600;
+	line-height: 1.25rem;
+}
+
 p {
 	font-size: 1.3rem;
 	font-weight: 300;
@@ -226,16 +216,38 @@ p {
 	width: 65%
 }
 
+footer ul {
+	margin: 2rem 0 0 0;
+}
+
+footer img {
+	margin-top: 1.75rem
+}
+
+footer .col-1-3:first-child {
+    padding: 0;
+    margin: .25rem 0 0;
+}
+
+footer .col-1-3:last-child, #work .row .col-1-2, header .col-1-13, header header h1, header header {
+	margin: 0;
+}
+
+#about .col-3-7 {
+	text-align: center;
+	margin: 0 auto;
+	float: none;
+}
+
 .circle {
 	margin: 5rem auto 0 auto;
 }
 
-#about p.col-3-7 {
-	display: block;
+#about {
+	margin-bottom: 10rem;
 }
 
 header .col-1-13 {
-	margin: 0;
 	padding: 0;
 }
 
@@ -243,7 +255,7 @@ header .col-1-13 {
 	padding: 10rem 0;
 }
 
-header header h1 {
+header header h1   {
 	padding-top: 1rem;
 }
 
@@ -251,7 +263,7 @@ header div:first-child ul li {
 	padding-top: 1.25rem;
 }
 
-header div:first-child ul li:nth-child(2), header div:first-child ul li:nth-child(3) {
+header div:first-child ul li:nth-child(2), header div:first-child ul li:nth-child(3), footer .col-1-3:last-child ul li:nth-child(2), footer .col-1-3:last-child ul li:last-child {
 	margin-left: 1.5rem;
 }
 
@@ -265,7 +277,6 @@ header div:first-child img, footer img {
 
 header:first-child .col-1-2 {
 	text-align: center;
-	display: block;
 }
 
 header div:last-child p:last-of-type  {
@@ -273,13 +284,8 @@ header div:last-child p:last-of-type  {
 }
 
 .center-block {
-	display: block;
 	float: none;
 	margin: 0 auto;
-}
-
-header header h1 {
-	margin: 0;
 }
 
 header ul {
@@ -290,16 +296,78 @@ header header {
 	margin-left: 9rem;
 }
 
-
-/* 6.0 responsive/ media queries */
-@media screen and (max-width:700px) {
-	
-	.wrapper {
-		width: 90%;
-	}
+header h1 img {
+	margin-left: 9rem;
 }
 
+footer .col-1-3:last-child {
+	margin-left: 14rem;
+}
+
+footer .col-1-13 {
+	margin-left: 6rem;
+}
+
+footer .col-1-3:first-child {
+	margin-left: 15rem;
+}
+
+
+
+/* ==== FLEX CODE 
+
+Need to include all content between Flex Code / Flex End 
+
+===*/ 
+
+.flex {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	/* removed a previous declaration */ 
+}
+
+header .flex   {
+	flex-direction: column; /* This has the items stack one on top of the other */ 
+}
+
+
+footer .col-1-3:first-child {
+        order: 1;  /* This is reordering the divs from lowes to highest. By default, the divs all have an order of zero and are listed in their static position. Now they go in order of 0, 1, 2, etc */ 
+ }
+
+footer .col-1-3:last-child {
+        order: 2; /* This is reordering the divs from lowes to highest. By default, the divs all have an order of zero and are listed in their static position. Now they go in order of 0, 1, 2, etc */ 
+ }
+
+/* END FLEX CODE */
+
 @media screen and (max-width:480px) {
+	
+		/* === FLEX CODE 
+	The necessary code for small display 
+	==== */
+	
+	.flex  {
+		flex-wrap:  wrap; /* This tells col-1-3 to wrap onto two lines */ 
+	}
+	
+	header .flex p:last-of-type {
+		order: 1; /* This is reordering the text elements from lowes to highest. By default, the text all has an order of zero and are listed in their static position. Now they go in order of 0, 1, 2, etc This makes the buttons appear on top of the last paragraph.*/ 
+	}
+	
+	footer .col-1-3 {
+		flex-basis: 50%; /* This tells the width of an item to be 50% */ 
+	}
+	
+	footer .col-1-3:first-child {
+        order: 0;  /* This is reordering the divs from lowes to highest. By default, the divs all have an order of zero and are listed in their static position. Now they go in order of 0, 1, 2, etc */ 
+		flex-basis: 100%; /* This tells the width of an item to be 100% */ 
+	}
+	
+	/* END Flex code */ 
 	
 	/*----- 1.0 - Typography -----*/
 	header div:last-child p:first-child {
@@ -315,7 +383,20 @@ header header {
 		line-height: 2rem;
 	}
 	
+	/*----- 1.3 - Buttons -----*/
 
+	header div:last-of-type div ul li {
+		margin-top: 2rem;
+		padding: 0 .78rem;
+	}
+
+	header div:last-of-type div ul li:first-child a {
+		padding: .75rem 8rem;
+	}
+
+	header div:last-of-type div ul li:last-child a {
+		padding: .75rem 9rem;
+	}
 	
 	/*----- 5.2 - Text Colors -----*/
 	
@@ -325,6 +406,29 @@ header header {
 		.wrapper {
 		width: 95%;
 	}
+	
+	footer .col-1-3:first-child p {
+	margin-top: 4rem;
+}
+	
+	#about {
+	margin-bottom: 5rem;
+}
+	
+	#about section .line-break {
+		padding-bottom: 4.5rem;
+		border-bottom: medium #d93d33 solid;
+		width: 20%;
+		margin: 0 auto;
+	}
+	
+	header div:last-child p:first-child {
+		margin: 1rem 0 0 0;
+	}
+	
+	header div:last-child p:last-of-type  {
+	margin: 8rem 0 4rem 0;
+}
 	
 	.col-1-2, .col-1-4, footer .col-1-3:first-child, #about p.col-3-7 {
 		width: 100%
@@ -346,15 +450,23 @@ header header {
 		padding-right: 0;
 	}
 	
-	header header {
+	header h1 img {
+	margin-left: 1rem;
+}
+	
+		footer .col-1-3:last-child {
+		margin: 0;
+	}
+
+	footer .col-1-13 {
+		margin: 0;
+	}
+
+	footer .col-1-3:first-child {
 		margin: 0;
 	}
 	
 }
-
-
-
-
 
 *, *:after, *:before {
 	-webkit-box-sizing: border-box;
@@ -365,106 +477,3 @@ header header {
 }
 
 
-
-
-
-
-
-
-
-/* ==== FLEX CODE 
-
-Need to include all content between Flex Code / Flex End 
-
-===*/ 
-
-.flex {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	align-items: flex-start;   /* removes the stretch property so the elements are only as tall as their content */ 
-}
-
-header-btn  { /*buttons in header */
-	flex-basis: 100%;
-}
-
-
-footer div .col-1-3:first-child {
-        order: 1;  /* This is reordering the divs from lowes to highest. By default, the divs all have an order of zero and are listed in their static position. Now they go in order of 0, 1, 2, etc */ 
- }
-
-footer div .col-1-3:last-child {
-        order: 2; /* This is reordering the divs from lowes to highest. By default, the divs all have an order of zero and are listed in their static position. Now they go in order of 0, 1, 2, etc */ 
- }
-
-/* END FLEX CODE */
-
-
-
-.wrapper {
-	width:70%;
-	margin:0 auto;	
-}
-
-footer, .col-1-2 {
-	text-align: center;
-}
-
-[class*='col-']:last-of-type {
-	padding-right: 0;
-}
-
-.col-1-3 {
-	width: 33.33%;
-}
-
-.col-1-2  {
-	width: 50%;
-	float: none;
-	margin: 0 auto;
-}
-
-li {
-	display: inline-block;
-}
-
-
-
-
-@media screen and (max-width:1000px) {
-	.wrapper {
-		width:95%;
-	}
-	
-	
-
-	/* === FLEX CODE 
-	The necessary code for small display 
-	==== */
-	
-	.flex  {
-		flex-wrap:  wrap; /* This tells col-1-3 to wrap onto two lines */ 
-	}
-	
-	header .flex p {
-		order: 1; /* This is reordering the text elements from lowes to highest. By default, the text all has an order of zero and are listed in their static position. Now they go in order of 0, 1, 2, etc */ 
-	}
-	
-	footer .col-1-3 {
-		flex-basis: 50%; /* This tells the width of an item to be 50% */ 
-	}
-	
-	footer .col-1-3:first-child {
-        order: 0;  /* This is reordering the divs from lowes to highest. By default, the divs all have an order of zero and are listed in their static position. Now they go in order of 0, 1, 2, etc */ 
-		flex-basis: 100%; /* This tells the width of an item to be 100% */ 
-	}
-	
-	/* END Flex code */ 
-	
-
-	
-	
-}
