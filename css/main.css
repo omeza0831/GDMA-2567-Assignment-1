@@ -62,11 +62,31 @@ header div:last-of-type div ul li:last-child a {
 	padding: .75rem 3rem;
 }
 
+#about .col-1-4 ul li a {
+	width: 40px;
+	height: 40px;
+	margin: 40px auto;
+}
+
+#about .col-1-4 ul li:first-child a {
+	background: url("../img/social-media.twitter.png") no-repeat 0 0;
+}
+#about .col-1-4 ul li:last-child a {
+	background: url("../img/social-media-facebook.png") no-repeat 0 0;
+}
+
+#about .col-1-4 ul li a:hover {
+	background-position: 0 -40px;
+}
+
+span {
+	display: none;
+}
+
 /*----- 1.5 - Lists -----*/
 ul {
 	padding-left: 0;
 }
-
 
 ul li {
 	list-style: none;
@@ -131,7 +151,6 @@ ul li {
 
 #work .row:first-child .col-1-2:first-child {
 	background-color: #fda505;
-	padding-bottom: 2rem;
 }
 
 #work .row:first-child .col-1-2:last-child {
@@ -160,13 +179,12 @@ ul li a:hover, span, #about > header:first-of-type h2 {
 }
 
 .bg-full-width:first-child { 
-   margin-left: -275px;
-   margin-right: -275px;
+   margin-left: -400px;
+   margin-right: -400px;
  }
 
 .bg-full-width:last-child {
-
-	margin-right: -504px;
+	margin-right: -585px;
 }
  
  .full-width-section:first-child {  
